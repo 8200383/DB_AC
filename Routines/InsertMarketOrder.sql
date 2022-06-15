@@ -1,6 +1,6 @@
-CREATE PROCEDURE InsertMarketOrder @MarketCode VARCHAR, @Ingredient VARCHAR, @Quantity QuantityType AS
+CREATE PROCEDURE InsertMarketOrder @MarketCode VARCHAR(10), @Ingredient VARCHAR(10), @Quantity QuantityType AS
 
-DECLARE @MarketNo INT;
+DECLARE @MarketNo INT
 
 SELECT @MarketNo = m.MarketNo
 FROM dbo.Market AS m
@@ -23,5 +23,3 @@ WHERE i.IngredientName LIKE '%' + @Ingredient + '%'
 
 INSERT INTO dbo.MarketOrderIngredientDetail (OrderNo, IngredientNo, Quantity)
 VALUES (@OrderNo, @IngredientNo, @Quantity)
-
--- Adicionar data no Market Order
