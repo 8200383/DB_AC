@@ -1,4 +1,4 @@
-CREATE TRIGGER dbo.TriggerTableOrderOnInsert
+CREATE TRIGGER dbo.UpdateTotalOrdersMadeOnInsert
     ON dbo.TableOrder
     AFTER INSERT AS
     DECLARE
