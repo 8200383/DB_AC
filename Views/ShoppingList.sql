@@ -1,6 +1,6 @@
 -- View: Lista de Compras para 10 pratos
 CREATE VIEW ShoppingList AS
-SELECT pid.IngredientNo, i.IngredientName, p.ProductName, (pid.Quantity*10)-i.Stock AS needed
+SELECT pid.IngredientNo, i.IngredientName, p.ProductName, (pid.Quantity*10) AS needed
 FROM dbo.MenuProductDetail
          INNER JOIN dbo.Menu AS m
                     ON MenuProductDetail.MenuNo = m.MenuNo

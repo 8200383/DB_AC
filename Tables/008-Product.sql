@@ -8,7 +8,6 @@ create table Product
     ProductName varchar(50) not null,
     IVA         IVAType     not null,
     UnitPrice   PriceType   not null,
-    HalfPrice   PriceType
 )
 go
 
